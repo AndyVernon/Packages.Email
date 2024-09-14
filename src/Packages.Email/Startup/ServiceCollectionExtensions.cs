@@ -1,5 +1,5 @@
-﻿using Email.Internal.Implementations;
-using Email.Internal.Interfaces;
+﻿using Email.Interfaces;
+using Email.Implementations;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Email.Startup
