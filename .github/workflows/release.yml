@@ -16,7 +16,7 @@ jobs:
       id: get_version
       run: |
         # Extract the version number from the .csproj file
-        VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" Email.csproj)
+        VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" src\Packages.Email\Email.csproj)
         echo "VERSION=${VERSION}" >> $GITHUB_ENV
 
     - name: Set up Git
