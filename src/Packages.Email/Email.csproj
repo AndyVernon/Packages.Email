@@ -2,10 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
+	<PackageId>AndyVernon.Packages.SendEmail</PackageId>
+    <Version>1.0.0</Version>
+	<Authors>andy.vernon</Authors>
+    <Description>First pass of NuGet package to send encrypted message</Description>
+	<PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/YourUsername/YourRepository</RepositoryUrl>
+    <PackageReleaseNotes>Initial release of the package</PackageReleaseNotes>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>1.0.0</Version>
-    <Description>First pass of NuGet package to send encrypted message</Description>
   </PropertyGroup>
 
   <ItemGroup>
