@@ -12,11 +12,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Get version from csproj
+    - name: Get version from .csproj
       id: get_version
       run: |
-        # Extract the version number from the .csproj file
-        VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" src\Packages.Email\Email.csproj)
+        # Extract the version number from the .csproj file located in 'src/Packages.Email'
+        VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" src/Packages.Email/Email.csproj)
         echo "VERSION=${VERSION}" >> $GITHUB_ENV
 
     - name: Set up Git
