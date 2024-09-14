@@ -1,4 +1,4 @@
-﻿using Email.Internal.Interfaces;
+﻿using Email.Interfaces;
 using Email.Models;
 
 namespace Email

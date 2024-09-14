@@ -1,0 +1,35 @@
+name: Create Tag and Push
+
+on:
+  push:
+    branches:
+      - development
+
+jobs:
+  create-tag:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Get version from csproj
+      id: get_version
+      run: |
+        # Extract the version number from the .csproj file
+        VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" YourProject.csproj)
+        echo "VERSION=${VERSION}" >> $GITHUB_ENV
+
+    - name: Set up Git
+      run: |
+        git config user.name "github-actions"
+        git config user.email "github-actions@github.com"
+
+    - name: Create and push tag
+      run: |
+        # Use the version extracted from the .csproj file
+        TAG_VERSION="v${{ env.VERSION }}"
+        echo "Creating tag ${TAG_VERSION}"
+        git tag ${TAG_VERSION}
+        git push origin ${TAG_VERSION}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
