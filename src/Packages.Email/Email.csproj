@@ -3,9 +3,9 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
 	<PackageId>AndyVernon.Packages.SendEmail</PackageId>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
 	<Authors>andy.vernon</Authors>
-    <Description>Added release.yml file for deploying to NuGet on merge into development branch</Description>
+    <Description>Fixing pipeline</Description>
 	<PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/YourUsername/YourRepository</RepositoryUrl>
     <PackageReleaseNotes>Initial release of the package</PackageReleaseNotes>
